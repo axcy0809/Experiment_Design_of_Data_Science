@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.18)  5 NOV 2020 17:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.18)  11 NOV 2020 00:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -497,20 +497,6 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 47.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-
- []
-
 <Bilder/age_dist.png, id=12, 433.62pt x 361.35pt>
 File: Bilder/age_dist.png Graphic file (type png)
 <use Bilder/age_dist.png>
@@ -521,27 +507,17 @@ File: Bilder/sex_dist.png Graphic file (type png)
 <use Bilder/sex_dist.png>
 Package pdftex.def Info: Bilder/sex_dist.png  used on input line 56.
 (pdftex.def)             Requested size: 154.92612pt x 129.10445pt.
-<Bilder/rating_dist.png, id=15, 433.62pt x 361.35pt>
-File: Bilder/rating_dist.png Graphic file (type png)
-<use Bilder/rating_dist.png>
-Package pdftex.def Info: Bilder/rating_dist.png  used on input line 59.
-(pdftex.def)             Requested size: 154.92612pt x 129.10445pt.
+<Bilder/sex_dist_rating.png, id=15, 578.16pt x 397.485pt>
+File: Bilder/sex_dist_rating.png Graphic file (type png)
+<use Bilder/sex_dist_rating.png>
+Package pdftex.def Info: Bilder/sex_dist_rating.png  used on input line 59.
+(pdftex.def)             Requested size: 178.40108pt x 122.64894pt.
 
-Overfull \hbox (17.17453pt too wide) in paragraph at lines 52--61
+Overfull \hbox (40.64949pt too wide) in paragraph at lines 52--61
 [][] [] [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--75
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--75
-
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 77.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 103.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 13.59999pt.
@@ -550,29 +526,30 @@ This may cause the page layout to be inconsistent, however.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
- <./Bilder/age_dist.png> <./Bilder/sex_dist.png> <./Bilder/rating_dist.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
+ <./Bilder/age_dist.png> <./Bilder/sex_dist.png> <./Bilder/sex_dist_rating.png>
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 103.
  (./Ex1_1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 77.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 103.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 103.
 Package rerunfilecheck Info: File `Ex1_1.out' has not changed.
 (rerunfilecheck)             Checksum: 5C97F8CA1D137D967FC56DDF3E847935;117.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 103.
  ) 
 Here is how much of TeX's memory you used:
  9139 strings out of 492609
- 129700 string characters out of 6131462
- 235077 words of memory out of 5000000
+ 129720 string characters out of 6131462
+ 238077 words of memory out of 5000000
  12940 multiletter control sequences out of 15000+600000
  9806 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,11n,43p,896b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,11n,43p,1062b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Ex1_1.pdf (1 page, 88954 bytes).
+Output written on Ex1_1.pdf (1 page, 95918 bytes).
 PDF statistics:
  49 PDF objects out of 1000 (max. 8388607)
  34 compressed objects within 1 object stream
