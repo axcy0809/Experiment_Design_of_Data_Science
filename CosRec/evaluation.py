@@ -1,5 +1,10 @@
 import numpy as np
 
+def f1_score(recall, precision):
+    return (2 * precision * recall) / (precision + recall)
+
+
+
 
 def _compute_apk(targets, predictions, k):
 
@@ -27,6 +32,8 @@ def _compute_precision_recall(targets, predictions, k):
     precision = float(num_hit) / len(pred)
     recall = float(num_hit) / len(targets)
     return precision, recall
+
+
 
 
 def evaluate_ranking(model, test, train=None, k=10):

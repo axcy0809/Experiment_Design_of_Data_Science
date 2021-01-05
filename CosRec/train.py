@@ -8,6 +8,7 @@ import torch.optim as optim
 from torch.autograd import Variable
 
 from evaluation import evaluate_ranking
+from evaluation import f1_score
 from interactions import Interactions
 from utils import *
 
@@ -194,7 +195,8 @@ class Recommender(object):
                 precision, recall, mean_aps = evaluate_ranking(self, test, train, k=[1, 5, 10])
                 output_str = "Epoch %d [%.1f s]\tloss=%.4f, map=%.4f, " \
                              "prec@1=%.4f, prec@5=%.4f, prec@10=%.4f, " \
-                             "recall@1=%.4f, recall@5=%.4f, recall@10=%.4f, [%.1f s]" % (epoch_num + 1,
+                             "recall@1=%.4f, recall@5=%.4f, recall@10=%.4f,"\
+                             "f1_score@1=%.4f,f1_score@5=%.4f,f1_score@10=%.4f,[%.1f s]" % (epoch_num + 1,
                                                                                          t2 - t1,
                                                                                          epoch_loss,
                                                                                          mean_aps,
@@ -204,6 +206,9 @@ class Recommender(object):
                                                                                          np.mean(recall[0]),
                                                                                          np.mean(recall[1]),
                                                                                          np.mean(recall[2]),
+                                                                                         f1_score(np.mean(precision[0]),np.mean(recall[0])),
+                                                                                         f1_score(np.mean(precision[1]),np.mean(recall[1])),
+                                                                                         f1_score(np.mean(precision[2]),np.mean(recall[2])),
                                                                                          time() - t2)
                 parameterset["Epoch"] = epoch_num + 1
                 parameterset["time1"] = t2 - t1
@@ -215,6 +220,9 @@ class Recommender(object):
                 parameterset["recall@1"] = np.mean(recall[0])
                 parameterset["recall@5"] = np.mean(recall[1])
                 parameterset["recall@10"] = np.mean(recall[2])
+                parameterset["f1_score@1"] = f1_score(np.mean(precision[0]),np.mean(recall[0]))
+                parameterset["f1_score@5"] = f1_score(np.mean(precision[1]),np.mean(recall[1]))
+                parameterset["f1_score@10"] = f1_score(np.mean(precision[2]),np.mean(recall[2]))
                 parameterset["time2"] = time() - t2
                 results = results.append(parameterset, ignore_index=True)
 
@@ -241,7 +249,7 @@ class Recommender(object):
             #    print(output_str)
         print ('***** Best map:{0:.4f} *****'.format(best_map))
         #results_odd.to_csv("results/Odd_ml1m", index=False)
-        results.to_csv("results/ml1m", index=False)
+        results.to_csv("results/ml1m_hold", index=False)
 
 
     def _generate_negative_samples(self, users, interactions, n):
@@ -335,8 +343,8 @@ if __name__ == '__main__':
     parser.add_argument('--dataset', type=str, required=True,
                             choices=['ml1m', 'gowalla'])
     parser.add_argument('--data_root', type=str, default='data/')
-    parser.add_argument('--train_dir', type=str, default='/test/train.txt')
-    parser.add_argument('--test_dir', type=str, default='/test/test.txt')
+    parser.add_argument('--train_dir', type=str, default='/test/train_hold.txt')
+    parser.add_argument('--test_dir', type=str, default='/test/test_hold.txt')
     parser.add_argument('--L', type=int, default=5)
     parser.add_argument('--T', type=int, default=3)
     # train arguments
